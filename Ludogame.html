@@ -1,0 +1,52 @@
+<html><head>
+<style>  
+ .inner1{
+background-color:green;
+height:100%;
+width:100%;}
+ #inner2{
+color:yellow;
+font-size:100px;
+width:100%;
+height:20%;
+text-align:center;} 
+.inner3{
+color:red;
+font-size:100px;
+width:100%;
+height:20%;
+text-align:center;}
+.inner4{
+width:100%;
+height:50%;
+text-align:center;}</style>
+</head>
+<body><div  class="inner1">
+<div  id="inner2"> <em>Dice Game</em>  </div>
+<div class="inner3"><em>player1</em>
+<em>player2</em></div>
+<div class="inner4"><img src="dice6.jpg" width="200px" height="200px">
+  <img src="dice6.jpg" width="200px" height="200px">
+</div> 
+</div>
+<script>
+var randomnumber1=Math.floor(Math.random()*6)+1;
+var randomsource1="dice"+randomnumber1+".jpg";
+var image1=document.querySelectorAll("img")[0] ;
+image1.setAttribute("src",randomsource1);
+var randomnumber2=Math.floor(Math.random()*6)+1;
+var randomsource2="dice"+randomnumber2+".jpg";
+var image2=document.querySelectorAll("img")[1] ;
+image2.setAttribute("src",randomsource2);
+
+if(randomnumber1>randomnumber2){
+document.getElementById("inner2").innerHTML="player1 win!";}
+else if(randomnumber2>randomnumber1){
+document.getElementById("inner2").innerHTML="player2 win!";}
+else{
+document.getElementById("inner2").innerHTML=" match draw!";
+};
+</script>
+
+</body>
+</html>
